@@ -15,7 +15,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-//функция для генерации ошибок
+//функция для создания меток ошибок
 function generateTip(text, color) {
     var tip = document.createElement('div');
     tip.className = 'tip';
@@ -88,7 +88,6 @@ $(".reset_button").on("click",function(){
         method: "GET",
         dataType: "html",
         success: function(data){
-            console.log(data);
             $("#result_table>tbody").html(data);
         },
         error: function(error){
